@@ -1,6 +1,8 @@
 $(document).ready(function(){
-	var $aElement = $("a");
-	$aElement.on('click', function(){
-		$(this).attr("href",$(this).attr("href") + location.search);
+	$("a").click(function(){
+		var link = $(this).attr("href")
+		var pu = location.search
+		link = link + pu
+		$(this).attr("href",link);
 	});
 });
